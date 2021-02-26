@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in motivate_bot.gemspec
-gemspec
+ruby '>=2.5'
 
-gem 'rake', '~> 13.0'
+group :development, :test do
+  gem 'pry-byebug', '~> 3.9'
+  gem 'rubocop', '~> 1.10'
+end
 
-gem 'rubocop', '~> 1.7'
-
-gem 'telegram-bot-ruby'
+group :test do
+  gem 'rspec', '~> 3.10'
+  gem 'rubocop-rspec', '~> 2.2'
+end
